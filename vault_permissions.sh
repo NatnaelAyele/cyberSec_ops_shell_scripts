@@ -45,6 +45,8 @@ if [ -d "$dir" ]; then
             echo "ERROR: file not found"
         fi
     done
+    echo "Final file permission is: "
+    ls -l keys.txt secrets.txt logs.txt
 else
     echo "directory not found"
 fi
