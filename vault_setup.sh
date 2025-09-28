@@ -1,5 +1,5 @@
 #!/bin/bash
-directory=secure_vault
+directory=~/secure_vault
 mkdir -p ~/secure_vault
 cd secure_vault
 touch keys.txt secrets.txt logs.txt
