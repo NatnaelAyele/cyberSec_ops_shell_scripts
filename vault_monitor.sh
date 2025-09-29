@@ -13,7 +13,14 @@ if [ -d "$directory" ]; then
             echo "Modified: $mod_date" >> "$directory/report.txt"
             echo "Permissions: $permissions" >> "$directory/report.txt"
 	    echo >> "$directory/report.txt"
-        fi
+        
+	   perm=$(stat -c "%a" "$file_path")
+	   group=${perm:1:1}
+	   others=${perm:2:1}
+	   if [[ "$group" != "4" && "$group" != "0" ]] || [[ "$others" != "4" && "$others" != "0" ]]; then 
+    		echo "⚠️ SECURITY RISK DETECTED"
+	   fi
+	fi
     done
     echo "Report created successfully"
 else
