@@ -20,7 +20,7 @@ fi
 }
 
 log_entry () {
-	echo "$(date '+%Y-%m-%d %H:%M:%S')" >> ~/secure_vault/log.txt
+	echo "$(date '+%Y-%m-%d %H:%M:%S')" >> ~/secure_vault/logs.txt
 	echo "log saved"
 }
 

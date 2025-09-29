@@ -8,11 +8,11 @@ if [ -d "$directory" ]; then
             size=$(stat -c%s "$file_path")
             mod_date=$(stat -c%y "$file_path")
             permissions=$(stat -c%A "$file_path")
-            echo "File name: $file" >> "$directory/report.txt"
-            echo "Size: $size bytes" >> "$directory/report.txt"
-            echo "Modified: $mod_date" >> "$directory/report.txt"
-            echo "Permissions: $permissions" >> "$directory/report.txt"
-	    echo >> "$directory/report.txt"
+            echo "File name: $file" >> "$directory/vault_report.txt"
+            echo "Size: $size bytes" >> "$directory/vault_report.txt"
+            echo "Modified: $mod_date" >> "$directory/vault_report.txt"
+            echo "Permissions: $permissions" >> "$directory/vault_report.txt"
+	    echo >> "$directory/vault_report.txt"
         
 	   perm=$(stat -c "%a" "$file_path")
 	   group=${perm:1:1}
