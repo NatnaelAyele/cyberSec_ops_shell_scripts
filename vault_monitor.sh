@@ -8,13 +8,14 @@ if [ -d "$directory" ]; then
             size=$(stat -c%s "$file_path")
             mod_date=$(stat -c%y "$file_path")
             permissions=$(stat -c%A "$file_path")
-            echo "File name: $file" >> report.txt
-            echo "Size: $size bytes" >> report.txt
-            echo "Modified: $mod_date" >> report.txt
-            echo "Permissions: $permissions" >> report.txt
-	    echo "Report created successfully"
+            echo "File name: $file" >> "$directory/report.txt"
+            echo "Size: $size bytes" >> "$directory/report.txt"
+            echo "Modified: $mod_date" >> "$directory/report.txt"
+            echo "Permissions: $permissions" >> "$directory/report.txt"
+	    echo >> "$directory/report.txt"
         fi
     done
+    echo "Report created successfully"
 else
     echo "secure vault not found"
 fi
