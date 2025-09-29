@@ -1,8 +1,6 @@
 #!/bin/bash
 directory=~/secure_vault
 
-> report.txt
-
 if [ -d "$directory" ]; then
     for file in keys.txt secrets.txt logs.txt; do
         file_path="$directory/$file"
