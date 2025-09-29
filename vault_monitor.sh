@@ -12,6 +12,7 @@ if [ -d "$directory" ]; then
             echo "Size: $size bytes" >> report.txt
             echo "Modified: $mod_date" >> report.txt
             echo "Permissions: $permissions" >> report.txt
+	    echo "Report created successfully"
         fi
     done
 else
