@@ -1,7 +1,7 @@
 #!/bin/bash
 directory=~/secure_vault
 mkdir -p ~/secure_vault
-cd secure_vault
+cd $directory
 touch keys.txt secrets.txt logs.txt
 for file in keys.txt secrets.txt logs.txt; do
 	echo "Welcome $USER" > $file
